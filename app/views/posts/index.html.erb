@@ -8,7 +8,9 @@
     <div class="card-body">
       <%= render post %>
       <%= link_to "Mostrar", post,class:"card-link"%>
-      <%= link_to post.reactions.count, post, class:"card-link"%>
+      <%= link_to "Miau! #{post.reactions.select{|post| post[:kind] == 'like'}.count}", post, class:"card-link"%>
+      <%= link_to "Dislike #{post.reactions.select{|post| post[:kind] == 'dislike'}.count}", post, class:"card-link"%>
+
     </div>
   <% end %>
 </div>
