@@ -1,27 +1,5 @@
-<div id="<%= dom_id post %>">
-  <p>
-    <strong>Title:</strong>
-    <%= post.title %>
-  </p>
-
-  <p>
-    <strong>Description:</strong>
-    <%= post.description %>
-  </p>
-
-  <p>
-    <strong>Place:</strong>
-    <%= post.place %>
-  </p>
-
-  <p>
-    <strong>When went:</strong>
-    <%= post.when_went %>
-  </p>
-
-  <p>
-    <strong>User:</strong>
-    <%= post.user_id %>
-  </p>
-
-</div>
+    <h5 class="card-title"><strong>Titulo:</strong><%= post.title %></h5>
+    <p class="card-text"> <strong>Usuario:</strong><%= post.user.name %> </p>
+    <p class="card-text">  <strong>Descripción:</strong><%= post.description %></p>
+    <p class="card-text"> <%= post.when_went %> </p>
+    <h6 class="card-subtitle mb-2 text-body-secondary"><%= post.place %></h6>
