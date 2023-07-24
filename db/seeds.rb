@@ -16,7 +16,7 @@ users.each do |user|
         user_id: user.id)
 end
 posts = Post.all
-until Comment.count == 100 do
+until Comment.count == 20 do
     Comment.create(content: Faker::Lorem.paragraph_by_chars(number: 200, supplemental: false), 
     post_id: posts.sample.id, 
     user_id: users.sample.id)
