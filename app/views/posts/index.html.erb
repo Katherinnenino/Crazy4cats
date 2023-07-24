@@ -2,10 +2,15 @@
 
 <h1>Publicaciones</h1>
 <%= link_to "Nueva publicación", new_post_path %>
+
 <div id="posts">
+
   <% @posts.each do |post| %>
-    <div class="card" style="width: 18rem;">
-    <div class="card-body">
+
+
+    <div class="card border-primary mb-3" style="width: 18rem;">
+    <div class="card-body text-primary">
+    
       <%= render post %>
       <%= link_to "Mostrar", post,class:"card-link"%>
       <%= link_to "Miau! #{post.reactions.select{|post| post[:kind] == 'like'}.count}", post, class:"card-link"%>
@@ -13,6 +18,7 @@
 
     </div>
   <% end %>
+ 
 </div>
 
 
